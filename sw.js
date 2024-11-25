@@ -1,11 +1,11 @@
 const CACHE_NAME = "karting-app-cache-v1";
 const ASSETS_TO_CACHE = [
-  "./index.html",
-  "./style.css",
-  "./script.js",
-  "./site.webmanifest",
-  "./web-app-manifest-192x192.png",
-  "./web-app-manifest-512x512.png"
+  "SKart/index.html",
+  "SKart/style.css",
+  "SKart/script.js",
+  "SKart/site.webmanifest",
+  "SKart/web-app-manifest-192x192.png",
+  "SKart/web-app-manifest-512x512.png"
 ];
 
 // Événement d'installation
