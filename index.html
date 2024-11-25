@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestion de sessions de karting</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SKarting" />
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+    <header class="app-header">
+        <h1>Sessions Karting</h1>
+        <img src="web-app-manifest-192x192.png" alt="logo session karting" height="100px" />
+    </header>
+    
+    <main class="app-content">
+        <!-- Page d'accueil -->
+        <section id="home" class="view active">
+            <h2>Liste des sessions</h2>
+            <button id="install-button" style="display: none;">Installer l'application</button>
+
+            <button class="btn-primary" id="btn-create-session">+ Nouvelle session</button>
+            <ul id="session-list" class="session-list">
+                <!-- Les sessions s'afficheront ici -->
+            </ul>
+        </section>
+
+        <!-- Page de création de session -->
+        <section id="create-session" class="view">
+            <h2>Nouvelle session</h2>
+            <form id="session-form">
+                <label for="session-name">Nom de la session :</label>
+                <input type="text" id="session-name" required>
+                
+                <label for="session-date">Date :</label>
+                <input type="date" id="session-date" required>
+                
+                <button class="btn-primary" type="submit">Créer</button>
+                <button class="btn-secondary" type="button" id="btn-cancel">Annuler</button>
+            </form>
+        </section>
+
+        <!-- Page de gestion des sous-sessions -->
+        <section id="manage-sub-sessions" class="view">
+            <h2>Gestion des sous-sessions</h2>
+            <div id="session-info"></div>
+            <ul id="sub-session-list" class="session-list">
+                <li data-sub-session="S1">Sous-session S1</li>
+                <li data-sub-session="S2">Sous-session S2</li>
+                <li data-sub-session="S3">Sous-session S3</li>
+            </ul>
+           
+        </section>
+
+
+        <!-- Page de gestion des tours -->
+        <section id="manage-tours" class="view">
+            <h2>Gestion des tours</h2>
+            <div id="session-info"></div>
+            <form id="tour-form">
+                <label for="tour-time">Temps du tour (en secondes) :</label>
+                <input type="number" step=".001" id="tour-time" required>
+                <button class="btn-primary" type="submit">Ajouter</button>
+            </form>
+            <ul id="tour-list" class="session-list">
+                <!-- Liste des tours -->
+            </ul>
+            <button class="btn-secondary" id="btn-back-to-session">Retour</button>
+        </section>
+
+            <!-- Section pour les statistiques -->
+        <section id="stats">
+            <h3>Statistiques</h3>
+            <ul>
+                <li id="best-time">Meilleur temps : N/A</li>
+                <li id="average-time">Temps moyen : N/A</li>
+                <li id="total-laps">Nombre de tours : N/A</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2024 Karting App</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
